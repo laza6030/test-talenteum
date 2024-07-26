@@ -1,8 +1,6 @@
 import request from "supertest";
 import app from "..";
 
-jest.useRealTimers();
-
 describe("Given a Server", () => {
   it("Should return a 200 status", async () => {
     const response = await request(app).get("/");
