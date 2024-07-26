@@ -54,7 +54,7 @@ describe("Given a POST /save-user", () => {
   });
 
   describe("When given age is a negative value", () => {
-    it('Should return a "Age can not be negative" error message', async () => {
+    it('Should return a "Age should be a positive number" error message', async () => {
       const response = await request(app).post("/save-user").send({
         username: "johndoe",
         email: "johndoe@user.com",
@@ -64,7 +64,7 @@ describe("Given a POST /save-user", () => {
       console.log(response.text);
 
       expect(response.statusCode).toBe(500);
-      expect(response.text).toBe("Age can not be negative");
+      expect(response.text).toBe("Age should be a positive number");
     });
   });
 });

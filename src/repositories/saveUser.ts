@@ -13,7 +13,7 @@ export const saveUser = async (req: Request, res: Response) => {
     if (!isEmailValid(user.email))
       throw new Error("Please provide a valid email");
 
-    if (user.age < 0) throw new Error("Age can not be negative");
+    if (user.age <= 0) throw new Error("Age should be a positive number");
 
     // Save the user to the database
     await pool.query(
