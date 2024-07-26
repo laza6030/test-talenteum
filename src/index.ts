@@ -30,3 +30,5 @@ app.listen(config.serverPort, () => {
     `[server]: Server is running at http://localhost:${config.serverPort}`
   );
 });
+
+export default app;
