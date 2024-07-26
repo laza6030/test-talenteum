@@ -10,7 +10,7 @@ describe("Given a Server", () => {
   });
 });
 
-describe("Given a POST /save-user", () => {
+describe("Given a POST request at the path /save-user", () => {
   describe("When the request is valid", () => {
     it("Should return a 200 status", async () => {
       const response = await request(app).post("/save-user").send({

@@ -4,17 +4,18 @@ import config from "../config";
 
 // Create a new pool
 export const pool = new Pool({
-  user: config.user,
-  host: config.host,
-  database: config.database,
-  password: config.password,
-  port: config.postgresPort,
+  user: config.DB_USER,
+  host: config.DB_HOST,
+  database: config.DB_NAME,
+  password: config.DB_PASSWORD,
+  port: config.DB_PORT,
 });
 
 export const initDatabase = async () => {
-  const client = await pool.connect();
-
   try {
+    const client = await pool.connect();
+
+    // Create the users table
     await client.query(`
       CREATE TABLE IF NOT EXISTS users (
         id SERIAL PRIMARY KEY,
