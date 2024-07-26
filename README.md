@@ -1,6 +1,6 @@
 # General information
 
-This is an API for saving user information into a PostgreSQL database
+This is an API for saving user informations into a PostgreSQL database
 
 ## Technologies used
 
@@ -14,6 +14,8 @@ This is an API for saving user information into a PostgreSQL database
 </ul>
 
 ## Run locally
+
+Node version: _v20.8.0_
 
 1. Clone the repository or [download](https://github.com/laza6030/test-talenteum/archive/refs/heads/main.zip) the zip file and extract it.
 
@@ -57,7 +59,7 @@ For development mode, run `npm run dev`
 
 ## How to test the API
 
-- You can use **Postman** to test the API. Send a POST request to the http://localhost:3000/save-user URL with the following body request:
+You can use **Postman** to test the API. Send a POST request to the http://localhost:3000/save-user URL with the following body request:
 
 ```
 {

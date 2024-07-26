@@ -25,9 +25,9 @@ app.post("/save-user", saveUser);
 initDatabase();
 
 // Start the server
-app.listen(config.serverPort, () => {
+app.listen(config.SERVER_PORT, () => {
   console.log(
-    `[server]: Server is running at http://localhost:${config.serverPort}`
+    `[server]: Server is running at http://localhost:${config.SERVER_PORT}`
   );
 });
 
