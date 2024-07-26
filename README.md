@@ -27,18 +27,24 @@ git clone https://github.com/laza6030/test-talenteum.git
 
 ```
 cd test-talenteum
-mkdir .env
+touch .env
 ```
 
 4. Fill the **.env** file like in the **.env.example** (with your own value)
 
-5. Open command line and build the project
+5. Install dependencies
+
+```
+npm install
+```
+
+6. Build the project
 
 ```
 npm run build
 ```
 
-6. Start the server
+7. Start the server
 
 ```
 npm run start
